@@ -14,7 +14,7 @@ class App {
   }
 
   database () {
-    mongoose.connect('mongodb+srv://deploy:102030@cluster0-ipdds.mongodb.net/market?retryWrites=true&w=majority', {useCreateIndex : true, useNewUrlParser: true, useFindAndModify: false})
+    mongoose.connect(process.env.DB_URL, {useCreateIndex : true, useNewUrlParser: true, useFindAndModify: false})
 
   }
 
