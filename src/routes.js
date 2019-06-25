@@ -11,7 +11,7 @@ const validators = require('./app/validators')
 routes.post('/users', validate(validators.User), controllers.UserController.store)
 routes.post('/sessions', validate(validators.Session), controllers.SessionController.store)
 
-//routes.use(authMiddleware)
+routes.use(authMiddleware)
 
 routes.get('/ads', controllers.AdController.index)
 routes.get('/ads/:id', controllers.AdController.show)
